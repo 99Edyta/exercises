@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gæt et tal | Omvendt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="talomvent.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="topbar">
+        <a class="back-link" href="#" aria-label="Tilbage">← <span>LOGIKLAB</span></a>
+        <span class="round-label">MISSION 01 <i></i> COMPUTEREN GÆTTER</span>
+      </header>
+
+      <section class="intro">
+        <p class="eyebrow">OMVENDT GÆT ET TAL</p>
+        <h1>Du tænker.<br /><em>Jeg regner.</em></h1>
+        <p class="intro-copy">Vælg et hemmeligt heltal mellem 0 og 100. Jeg finder det med færrest mulige gæt.</p>
+      </section>
+
+      <section class="game-panel" aria-live="polite">
+        <div class="status-row">
+          <div>
+            <span class="status-kicker">STATUS</span>
+            <h2 id="statusText">Klar til din hemmelighed?</h2>
+          </div>
+          <div class="attempts">
+            <span class="status-kicker">GÆT</span>
+            <strong id="attemptCount">0</strong><span class="attempt-max"> / 7</span>
+          </div>
+        </div>
+
+        <div class="guess-zone" id="guessZone">
+          <div class="range-label"><span id="lowerBound">0</span><span id="upperBound">100</span></div>
+          <div class="guess-number" id="guessNumber">?</div>
+          <p id="guessHint">Tryk på start, når du har valgt dit tal</p>
+        </div>
+
+        <div class="actions" id="answerActions" aria-label="Svar på computerens gæt">
+          <button class="answer-button too-low" id="tooLowButton" type="button" disabled>
+            <span class="button-icon">↓</span>
+            <span>For lavt</span>
+          </button>
+          <button class="answer-button correct" id="correctButton" type="button" disabled>
+            <span class="button-icon">✓</span>
+            <span>Rigtigt</span>
+          </button>
+          <button class="answer-button too-high" id="tooHighButton" type="button" disabled>
+            <span class="button-icon">↑</span>
+            <span>For højt</span>
+          </button>
+        </div>
+
+        <button class="start-button" id="startButton" type="button">
+          <span id="startLabel">Start spillet</span><span class="start-arrow">↗</span>
+        </button>
+        <p class="keyboard-note">Computeren vælger altid det mest rationelle næste gæt.</p>
+      </section>
+
+      <footer class="footer-note"><span class="pulse-dot"></span> BINÆR SØGNING AKTIVERET <span>0 — 100</span></footer>
+    </main>
+    <script src="talomvent.js"></script>
+  </body>
+</html>

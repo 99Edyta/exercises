@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gæt et tal</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>Gæt mit tal</h1>
+    <p>Tænk på et tal mellem 0 og 100.</p>
+
+    <section aria-live="polite">
+      <p>Computerens gæt:</p>
+      <strong id="guess">-</strong>
+      <p id="status">Tryk på start.</p>
+    </section>
+
+    <button id="start-button" type="button">Start spillet</button>
+    <div id="feedback-buttons">
+      <button data-answer="low" type="button" disabled>For lavt</button>
+      <button data-answer="correct" type="button" disabled>Rigtigt</button>
+      <button data-answer="high" type="button" disabled>For højt</button>
+    </div>
+
+    <p>Antal gæt: <strong id="attempts">0</strong></p>
+    <p id="message"></p>
+  </main>
+</body>
+</html>

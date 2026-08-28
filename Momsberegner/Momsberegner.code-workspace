@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "."
+	},
+	{
+		"path": "../gæt et tal omvent"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "gæt et tal omvent"
+  }
+}

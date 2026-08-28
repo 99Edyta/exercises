@@ -1,0 +1,71 @@
+:root {
+  --ink: #17252d;
+  --muted: #6d7d80;
+  --paper: #fffdf8;
+  --mint: #bce8d7;
+  --mint-dark: #276a58;
+  --coral: #ed856c;
+  --yellow: #f4c95d;
+  --line: #dce8e2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--ink);
+  font-family: "DM Sans", sans-serif;
+  background: #e9f5ef;
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(244, 201, 93, 0.6) 0 9rem, transparent 9.1rem), linear-gradient(135deg, #edf9f3 0%, #dcefe8 100%);
+}
+
+.game-card {
+  width: min(100%, 590px);
+  padding: clamp(28px, 6vw, 58px);
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #dff3ea;
+}
+.topline,
+.game-info {
+  display: flex;
+  margin: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+main {
+  width: min(90%, 500px);
+  margin: 60px auto;
+  padding: 30px;
+  text-align: center;
+  background: white;
+  border: 2px solid #28745d;
+  border-radius: 10px;
+}
+
+#guess {
+  display: block;
+  margin: 10px;
+  font-size: 70px;
+  color: #28745d;
+}
+
+#feedback-buttons {
+  .game-info > div {
+    display: grid;
+    gap: 5px;
+    margin-top: 15px;
+  }
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
